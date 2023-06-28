@@ -123,7 +123,7 @@ return true;
 },
 async deleteImage(id) {
 try {
-const response = await axios.delete('http://localhost:5000/api/photo', { data: { id } });
+const response = await axios.delete('/api/photo', { data: { id } });
 
 if (response.status === 200) {
 const index = this.images.findIndex((image) => image.id === id);

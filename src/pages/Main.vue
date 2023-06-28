@@ -220,7 +220,7 @@ handleSubmit() {
     id_service: this.id_service
   };
 
-  axios.post("http://localhost:5000/api/zayavki", zayavki)
+  axios.post("/api/zayavki", zayavki)
     .then(res => {
       // Обработка успешного ответа
       console.log(res.data);

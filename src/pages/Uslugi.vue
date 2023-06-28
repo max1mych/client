@@ -56,7 +56,7 @@ class="btn btn-link mx-1 my-auto"
               <div class="container p-0">
                 <div class="aspect-ratio-container" @mouseover="highlightUsluga(usluga.id)"
                   @mouseout="removeHighlightUsluga" :class="{ 'highlighted-usluga': highlightedUslugaId === usluga.id }">
-                  <img :src="'http://localhost:5000/' + usluga.img" alt="" class="usluga-img img-fluid image-fit" />
+                  <img :src="'axios.defaults.baseURL' + usluga.img" alt="" class="usluga-img img-fluid image-fit" />
                   <div class="highlight-overlay"></div>
                   <div class="caption">ПОДРОБНЕЕ</div>
                 </div>

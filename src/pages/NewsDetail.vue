@@ -10,7 +10,7 @@
       </div>
       <div class="container-fluid m-3 mx-auto" style="border: 2px solid black; border-radius: 30px;">
         <div class="container-fluid mt-4 px-2 mx-auto d-flex mx-auto container-fluid justify-content-center" >
-          <p class="">  <img :src="'http://localhost:5000/' + novost.img" alt="" 
+          <p class="">  <img :src="'axios.defaults.baseURL' + novost.img" alt="" 
             class="novost-img img-fluid" 
             style="float:right; min-height: 10em;"> {{ block }}</p>
         </div>
@@ -33,7 +33,7 @@ export default {
   },
   async mounted() {
     axios
-      .get('http://localhost:5000/api/news/' + this.$route.params.id)
+      .get('/api/news/' + this.$route.params.id)
       .then((res) => {
         this.novost = res.data;
         console.log(res.data);

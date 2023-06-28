@@ -27,7 +27,7 @@
 <!--Картинка-->
 <div class="col-xl-6 col-sm-12 m-3 d-flex justify-content-center align-items-center">
 <div>
-<img :src="'http://localhost:5000/' + usluga.img" alt="" class="usluga-img img-fluid" style="max-width: 700px; max-height: 700px;">
+<img :src="'axios.defaults.baseURL' + usluga.img" alt="" class="usluga-img img-fluid" style="max-width: 700px; max-height: 700px;">
 </div>
 </div>
 </div>

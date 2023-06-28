@@ -109,7 +109,7 @@ export default {
         formData.append('price', this.price);
         formData.append('img', this.img);
 
-        axios.post('http://localhost:5000/api/service', formData, {
+        axios.post('/api/service', formData, {
           headers: {
             'Content-Type': 'multipart/form-data'
           }

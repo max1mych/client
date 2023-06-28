@@ -113,7 +113,7 @@ export default {
     },
     async deleteNews(id) {
       try {
-        await axios.delete('http://localhost:5000/api/news', { data: { id } });
+        await axios.delete('/api/news', { data: { id } });
         const index = this.news.findIndex(news => news.id === id);
         if (index !== -1) {
           this.news.splice(index, 1);
