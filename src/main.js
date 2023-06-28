@@ -5,7 +5,7 @@ import axios from 'axios';
 
 
 
-axios.defaults.baseURL= 'https://bokonach.onrender.com/'
+axios.defaults.baseURL = "https://bokonach.onrender.com/";
 createApp(App)
     .use(router, axios)
     .mount('#app')
