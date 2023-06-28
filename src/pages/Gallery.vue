@@ -110,7 +110,7 @@ this.img = file;
 },
 getImageUrl(image) {
 if (image && image.img) {
-return axios.defaults.baseURL + image.img;
+return 'https://bokonach.onrender.com/' + image.img;
 }
 return '';
 },
