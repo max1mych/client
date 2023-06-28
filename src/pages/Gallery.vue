@@ -53,7 +53,7 @@ async mounted() {
 this.isAuthenticated = this.checkAuthentication();
 
 try {
-const response = await axios.get('http://localhost:5000/api/photo');
+const response = await axios.get('/api/photo');
 this.images = response.data;
 } catch (error) {
 console.error(error);
@@ -88,7 +88,7 @@ if (this.img && this.validateImage(this.img)) {
 const formData = new FormData();
 formData.append('img', this.img);
 
-axios.post('http://localhost:5000/api/photo', formData, {
+axios.post('/api/photo', formData, {
 headers: {
 'Content-Type': 'multipart/form-data'
 }
@@ -110,7 +110,7 @@ this.img = file;
 },
 getImageUrl(image) {
 if (image && image.img) {
-return 'http://localhost:5000/' + image.img;
+return 'axios.defaults.baseURL' + '/' + image.img;
 }
 return '';
 },
