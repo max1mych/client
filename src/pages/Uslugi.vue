@@ -27,10 +27,14 @@
               <div class="row container-fluid p-0">
                 <div class="col-2">
                   <!-- Кнопка удаления -->
-                  <button v-if="isAuthenticated" name="id" class="btn btn-link mx-1 my-auto"
-                    @click.stop="deleteUslugi(usluga.id)">
-                    <p><img src="../assets/nado/delete.svg" alt="" width="40" /></p>
-                  </button>
+                  <button
+v-if="isAuthenticated"
+name="id"
+class="btn btn-link mx-1 my-auto"
+@click.stop="deleteUslugi(usluga.id)"
+>
+<p><img src="../assets/nado/delete.svg" alt="" width="40" /></p>
+</button>
                 </div>
                 <div class="col-10">
                   <!-- Заголовок услуги -->
