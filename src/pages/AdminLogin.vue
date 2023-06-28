@@ -39,7 +39,7 @@ export default {
         password: this.password,
       };
 
-      axios.post("http://localhost:5000/api/admin/login", log)
+      axios.post("/api/admin/login", log)
         .then(res => {
           // Обработка успешного ответа
           console.log(res.data);
