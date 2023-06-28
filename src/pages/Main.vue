@@ -202,10 +202,10 @@ export default {
   }
 },
 validateEmail() {
-  const regex = /^[a-zA-Z]+$/;
-  if (!regex.test(this.email)) {
-    this.email = this.email.replace(/[^a-zA-Z]+/g, '');
-  }
+const regex = /^[a-zA-Z0-9@._-]+$/;
+if (!regex.test(this.email)) {
+this.email = this.email.replace(/[^a-zA-Z0-9@._-]+/g, '');
+}
 },
 handleSubmit() {
   if (!this.FIO || !this.Tel || !this.email || !this.id_service) {

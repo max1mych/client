@@ -94,7 +94,7 @@ const routes = [
 const router = createRouter(
     {
         routes,
-        history: createWebHistory("http://localhost:5000/api")
+        history: createWebHistory()
     }
 )
 export default router;

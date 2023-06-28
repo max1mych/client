@@ -17,31 +17,18 @@
     </div>
     <!-- Список услуг -->
     <div v-for="usluga in uslugi" :key="usluga.id">
-      <div
-        class="container usluga "
-        @click="openUsluga(usluga.id)"
-        @mouseover="highlightUsluga(usluga.id)"
-        @mouseout="removeHighlightUsluga"
-        :class="{ 'highlighted-usluga': highlightedUslugaId === usluga.id }"
-      >
+      <div class="container usluga " @click="openUsluga(usluga.id)" @mouseover="highlightUsluga(usluga.id)"
+        @mouseout="removeHighlightUsluga" :class="{ 'highlighted-usluga': highlightedUslugaId === usluga.id }">
         <div class="row">
           <!-- Левая половина - текст -->
-          <div
-            class="col-xl-6 col-lg-12 px-5 usluga-col text-col"
-            @mouseover="highlightUsluga(usluga.id)"
-            @mouseout="removeHighlightUsluga"
-            :class="{ 'highlighted-usluga': highlightedUslugaId === usluga.id }"
-          >
+          <div class="col-xl-6 col-lg-12 px-5 usluga-col text-col" @mouseover="highlightUsluga(usluga.id)"
+            @mouseout="removeHighlightUsluga" :class="{ 'highlighted-usluga': highlightedUslugaId === usluga.id }">
             <div class="row container-fluid p-0">
               <div class="row container-fluid p-0">
                 <div class="col-2">
                   <!-- Кнопка удаления -->
-                  <button
-                    v-if="isAuthenticated"
-                    name="id"
-                    class="btn btn-link mx-1 my-auto"
-                    @click="deleteUslugi(usluga.id)"
-                  >
+                  <button v-if="isAuthenticated" name="id" class="btn btn-link mx-1 my-auto"
+                    @click.stop="deleteUslugi(usluga.id)">
                     <p><img src="../assets/nado/delete.svg" alt="" width="40" /></p>
                   </button>
                 </div>
@@ -63,17 +50,9 @@
           <div class="col-xl-6 col-lg-12 p-0 usluga-col">
             <router-link :to="'/Uslugi/' + usluga.id">
               <div class="container p-0">
-                <div
-                  class="aspect-ratio-container"
-                  @mouseover="highlightUsluga(usluga.id)"
-                  @mouseout="removeHighlightUsluga"
-                  :class="{ 'highlighted-usluga': highlightedUslugaId === usluga.id }"
-                >
-                  <img
-                    :src="'http://localhost:5000/' + usluga.img"
-                    alt=""
-                    class="usluga-img img-fluid image-fit"
-                  />
+                <div class="aspect-ratio-container" @mouseover="highlightUsluga(usluga.id)"
+                  @mouseout="removeHighlightUsluga" :class="{ 'highlighted-usluga': highlightedUslugaId === usluga.id }">
+                  <img :src="'http://localhost:5000/' + usluga.img" alt="" class="usluga-img img-fluid image-fit" />
                   <div class="highlight-overlay"></div>
                   <div class="caption">ПОДРОБНЕЕ</div>
                 </div>
@@ -171,7 +150,8 @@ export default {
 .aspect-ratio-container {
   position: relative;
   width: 100%;
-  padding-bottom: 75%; /* Set the aspect ratio here (e.g., 75% for 4:3) */
+  padding-bottom: 75%;
+  /* Set the aspect ratio here (e.g., 75% for 4:3) */
 }
 
 .usluga-img {

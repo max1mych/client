@@ -7,7 +7,7 @@ import axios from 'axios';
 
 axios.defaults.baseURL= 'http://localhost:5000/'
 createApp(App)
-    .use(router)
+    .use(router, axios)
     .mount('#app')
 
     
