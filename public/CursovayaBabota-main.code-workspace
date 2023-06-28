@@ -1,0 +1,13 @@
+{
+	"folders": [
+		{
+			"path": "../../CursovayaBabota-main"
+		},
+		{
+			"path": ".."
+		}
+	],
+	"settings": {
+		"git.ignoreLimitWarning": true
+	}
+}
