@@ -108,7 +108,7 @@ export default {
     },
     deleteUslugi(id) {
       axios
-        .delete('http://localhost:5000/api/service', { data: { id } })
+        .delete('/api/service', { data: { id } })
         .then(() => {
           const index = this.uslugi.findIndex((usluga) => usluga.id === id);
           if (index !== -1) {
